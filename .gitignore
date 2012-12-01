@@ -4,3 +4,4 @@
 local_settings.py
 venv
 jipange/staticfiles
+cms_page_media

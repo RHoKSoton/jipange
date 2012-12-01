@@ -159,7 +159,7 @@ LOGGING = {
 
 DATABASES = {}
 
-if not DEBUG:
+if HEROKU:
     DATABASES['default'] = dj_database_url.config()
 
 # Import local settings (DB details etc.)

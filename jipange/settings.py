@@ -89,6 +89,23 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'cms.middleware.page.CurrentPageMiddleware',
+    'cms.middleware.user.CurrentUserMiddleware',
+    'cms.middleware.toolbar.ToolbarMiddleware',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.auth',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.request',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'cms.context_processors.media',
+    'sekizai.context_processors.sekizai',
+)
+
+CMS_TEMPLATES = (
+    ('example.html', 'Example Template'),
 )
 
 ROOT_URLCONF = 'jipange.urls'
@@ -114,6 +131,17 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'cms',
+    'menus',
+    'mptt',
+    'south',
+    'cms.plugins.text',
+    'cms.plugins.picture',
+    'cms.plugins.link',
+    'cms.plugins.file',
+    'cms.plugins.snippet',
+    'cms.plugins.googlemap',
+    'sekizai',
 )
 
 # A sample logging configuration. The only tangible logging

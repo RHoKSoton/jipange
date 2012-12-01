@@ -21,4 +21,7 @@ urlpatterns = patterns('',
     }),
 
     url(r'^sms/$', 'jipange.views.reply_to_sms'),
+
+    # Django CMS
+    url(r'^', include('cms.urls')),
 )

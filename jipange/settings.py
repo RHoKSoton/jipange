@@ -1,4 +1,5 @@
 # Django settings for jipange project.
+import dj_database_url
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -153,6 +154,11 @@ LOGGING = {
 #}
 # Make this unique, and don't share it with anybody.
 #SECRET_KEY = 'some long and random string'
+
+DATABASES = {}
+
+if not DEBUG:
+    DATABASES['default'] = dj_database_url.config()
 
 # Import local settings (DB details etc.)
 try:

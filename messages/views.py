@@ -7,8 +7,8 @@ from models import *
 def reply_to_sms(request):
     response = Response()
 
-    user = PhoneUser.objects.get_or_create(number=request.POST['From'])
-
+    user, created = PhoneUser.objects.get_or_create(number=request.POST['From'])
+    print(user)
     message = Message()
     message.content = request.POST['Body']
     message.sender = user

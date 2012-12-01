@@ -1,7 +1,9 @@
 # Django settings for jipange project.
 import dj_database_url
+import os
 
-DEBUG = True
+HEROKU = bool(os.environ.get('DJANGO_PRODUCTION', False))
+DEBUG = not HEROKU
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (

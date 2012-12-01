@@ -114,6 +114,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'django_twilio',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -160,6 +161,10 @@ LOGGING = {
 #}
 # Make this unique, and don't share it with anybody.
 #SECRET_KEY = 'some long and random string'
+
+TWILIO_ACCOUNT_SID = 'ACf9e077bde4bb4953a3df6c849f74a5b8'
+TWILIO_AUTH_TOKEN = '7c5f00e40d941a0ca2a9bd0257d05ab8'
+TWILIO_DEFAULT_CALLERID = 'Jipange'
 
 DATABASES = {}
 

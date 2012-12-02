@@ -1,0 +1,51 @@
+[
+  {
+    "model": "clinics.ClinicService",
+    "pk": 1,
+    "fields": {
+      "name": "Comdoms",
+      "description": "Condoms"
+    }
+  },
+  {
+    "model": "clinics.ClinicService",
+    "pk": 2,
+    "fields": {
+      "name": "Family planning pills",
+      "description": "Family planning pills (contraceptive drugs)"
+    }
+  },
+  {
+    "model": "clinics.ClinicService",
+    "pk": 3,
+    "fields": {
+      "name": "VCT",
+      "description": "Voluntary Counselling and Testing"
+    }
+  },
+  {
+    "model": "clinics.ClinicService",
+    "pk": 4,
+    "fields": {
+      "name": "STI Exam",
+      "description": "Examination for sexually transmitted infections (STIs)"
+    }
+  },
+  {
+    "model": "clinics.ClinicService",
+    "pk": 5,
+    "fields": {
+      "name": "Counselling",
+      "description": "Counselling"
+    }
+  },
+  {
+    "model": "clinics.ClinicService",
+    "pk": 6,
+    "fields": {
+      "name": "Pregnancy test",
+      "description": "Pregnancy testing"
+    }
+  }
+]
+

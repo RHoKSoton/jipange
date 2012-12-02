@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.conf import settings
-
+from clinics.models import *
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
@@ -21,6 +21,13 @@ urlpatterns = patterns('',
     }),
 
     url(r'^sms/$', 'jipange.views.reply_to_sms'),
+
+
+    # Survey tools
+    #url(r'^survey/', include('survey.urls')),
+    #url(r'^survey/', include('crowdsourcing.urls')),
+
+    url(r'^clinics', include('clinics.urls')),
 
     # Django CMS
     url(r'^', include('cms.urls')),

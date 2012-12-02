@@ -36,7 +36,7 @@ USE_I18N = True
 USE_L10N = True
 
 # If you set this to False, Django will not use timezone-aware datetimes.
-USE_TZ = True
+USE_TZ = False
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
@@ -56,6 +56,10 @@ STATIC_ROOT = os.path.join(ROOTDIR, 'staticfiles')
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
+
+# Deprecated, workaround for django survey
+ADMIN_MEDIA_PREFIX = STATIC_URL
+ADMIN_MEDIA_URL = STATIC_URL
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -132,6 +136,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'django_twilio',
+    'geoposition',
     'cms',
     'menus',
     'mptt',
@@ -143,6 +148,7 @@ INSTALLED_APPS = (
     'cms.plugins.snippet',
     'cms.plugins.googlemap',
     'sekizai',
+    'clinics',
 )
 
 # A sample logging configuration. The only tangible logging

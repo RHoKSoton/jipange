@@ -1,5 +1,6 @@
 from django.db import models
 from geoposition.fields import GeopositionField
+from django import forms
 
 class Clinic(models.Model):
     """
@@ -62,12 +63,12 @@ class ClinicFeedback(models.Model):
 
     patient_age = models.IntegerField(
       'Your age (years)',
-      blank = True
+      blank = True, null = True,
     )
 
     patient_sex = models.CharField(
       'Your sex (gender)',
-      blank = True,
+      blank = True, null = True,
       max_length = 1,
       choices = (
         ('M', 'Male'),
@@ -77,17 +78,19 @@ class ClinicFeedback(models.Model):
 
 
     services_needed = models.ManyToManyField(
-      'ClinicService'
+      'ClinicService',
+      blank = True, null = True,
     )
 
     provider_sex = models.CharField(
       'Provider\'s sex (gender)',
-      blank = True,
+      blank = True, null = True,
       max_length = 1,
       choices = (
         ('M', 'Male'),
         ('F', 'Female'),
-      )
+      ),
+      #widget = forms.RadioSelect(),
     )
 
     free_questions = models.CharField(
@@ -98,7 +101,7 @@ class ClinicFeedback(models.Model):
         ('S', 'Somewhat'),
         ('N', 'No'),
       ),
-      blank = True
+      blank = True, null = True,
     )
     
     got_info = models.CharField(
@@ -109,7 +112,7 @@ class ClinicFeedback(models.Model):
         ('S', 'Somewhat'),
         ('N', 'No'),
       ),
-      blank = True
+      blank = True, null = True,
     )
     
     got_supplies = models.CharField(
@@ -120,7 +123,7 @@ class ClinicFeedback(models.Model):
         ('N', 'No'),
         ('X', 'Didn\'t want any'),
       ),
-      blank = True
+      blank = True, null = True,
     )
 
     harsh_provider = models.CharField(
@@ -131,7 +134,7 @@ class ClinicFeedback(models.Model):
         ('S', 'Somewhat'),
         ('N', 'No'),
       ),
-      blank = True
+      blank = True, null = True,
     )
     
     enough_privacy = models.CharField(
@@ -142,7 +145,7 @@ class ClinicFeedback(models.Model):
         ('S', 'Somewhat'),
         ('N', 'No'),
       ),
-      blank = True
+      blank = True, null = True,
     )
     
     pal_provided = models.NullBooleanField(
@@ -151,12 +154,12 @@ class ClinicFeedback(models.Model):
 
     waiting_time = models.IntegerField(
       'About how long did you have to wait? (minutes)',
-      blank = True
+      blank = True, null = True,
     )
 
     cost = models.IntegerField(
       'What did you pay for services, if anything?',
-      blank = True
+      blank = True, null = True,
     )
 
     recommended = models.CharField(
@@ -167,11 +170,11 @@ class ClinicFeedback(models.Model):
         ('M', 'Maybe'),
         ('N', 'No'),
       ),
-      blank = True
+      blank = True, null = True,
     )
 
     why_recommend = models.CharField(
       'Why or why not?',
       max_length = 255,
-      blank = True
+      blank = True, null = True,
     )

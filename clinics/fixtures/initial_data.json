@@ -3,7 +3,7 @@
     "model": "clinics.ClinicService",
     "pk": 1,
     "fields": {
-      "name": "Comdoms",
+      "name": "Condoms",
       "description": "Condoms"
     }
   },

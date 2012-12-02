@@ -1,9 +1,21 @@
 from django.conf.urls.defaults import patterns, url
-
+from django.views.generic import DetailView, ListView, TemplateView
+from clinics.models import Clinic
 import views
 
 urlpatterns = patterns('',
-    #url('^status_postback/$', views.update_delivery_status, name='status_postback'),
-    #url('^reply_postback/$', views.handle_reply, name='reply_postback'),
-    #url('^status/([0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12})/$', views.get_message_set_status, name='messageset-status'),
+
+    # Feedback form for anonymous results
+    #url('^feedback/?$', TemplateView.as_view(template_name='feedback_form.html')),
+
+    # Find nearest clinic, search for clinics
+    #url('^locate/?$', DetailView.as_view(model=Clinic)),
+
+    # List all clinics
+    url('^list/?$', ListView.as_view(model=Clinic)),
+
+    # Show clinic details
+    url('^detail/(?P<pk>\d+)/?$', DetailView.as_view(model=Clinic)),
+    url('^detail/(?P<slug>\d+)/?$', DetailView.as_view(model=Clinic, slug_field='name')),
+
 )

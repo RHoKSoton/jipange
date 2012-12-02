@@ -22,12 +22,7 @@ urlpatterns = patterns('',
 
     url(r'^sms/$', 'jipange.views.reply_to_sms'),
 
-
-    # Survey tools
-    #url(r'^survey/', include('survey.urls')),
-    #url(r'^survey/', include('crowdsourcing.urls')),
-
-    url(r'^clinics', include('clinics.urls')),
+    url(r'^clinics/', include('clinics.urls')),
 
     # Django CMS
     url(r'^', include('cms.urls')),

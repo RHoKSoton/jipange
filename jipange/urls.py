@@ -26,4 +26,6 @@ urlpatterns = patterns('',
 
     # Django CMS
     url(r'^', include('cms.urls')),
+    # Home Page, Django CMS doesn't handle root URL
+    url(r'^$', RedirectView.as_view(url='/home/')),
 )

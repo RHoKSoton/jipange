@@ -9,9 +9,10 @@ def reply_to_sms(request):
 
     user, created = PhoneUser.objects.get_or_create(number=request.POST['From'])
     print(user)
-    message = Message()
+    message = IncomingMessage()
     message.content = request.POST['Body']
     message.sender = user
     message.save()
 
+    response.sms('Thank you for your feedback!')
     return response

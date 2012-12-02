@@ -42,16 +42,23 @@ footer {
     text-align: center;
 }
 
-@media (min-width : 321px) and (max-width: 799px) {
+@media (min-width : 400px) and (max-width: 599px) {
     .content {
-        width: 50%;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width : 600px) and (max-width: 799px) {
+    .content {
+        width: 80%;
         margin: 0 auto;
     }
 }
 
 @media (min-width : 800px) {
     .content {
-        width: 30%;
+        width: 50%;
         margin: 0 auto;
     }
 }

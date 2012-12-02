@@ -44,7 +44,7 @@ def send_message(sender, instance, **kwargs):
 
     client = TwilioRestClient(
         settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
-    phones = list(instance.messaged_list.users.all())
+    phones = instance.messaged_list.users.all()
     for phone in phones:
         client.sms.messages.create(
             to=phone.number,

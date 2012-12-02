@@ -1,1 +1,57 @@
-/* Nothing here yet, but we need to show Django we have a static folder! */
+.content {
+    width: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    background-color: #880700;
+    padding: 10px;
+}
+
+ul {
+    padding: 10px;
+    background-color: #e3e3e3;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 2px solid white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h4 {
+    padding: 10px;
+    font-weight: bold;   
+}
+
+p {
+    padding: 15px 15px 0 15px;
+    line-height: 22px;
+}
+
+footer {
+    padding: 10px;
+    font-size: 10px;
+    height: 20px;
+    margin-top: 20px;
+    background-color: #e3e3e3;
+    text-align: center;
+}
+
+@media (min-width : 321px) and (max-width: 799px) {
+    .content {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width : 800px) {
+    .content {
+        width: 30%;
+        margin: 0 auto;
+    }
+}

@@ -20,7 +20,7 @@ urlpatterns = patterns('',
         'document_root': settings.STATIC_ROOT
     }),
 
-    url(r'^sms/$', 'jipange.views.reply_to_sms'),
+    url(r'^sms/$', 'messages.views.reply_to_sms'),
 
     url(r'^clinics/', include('clinics.urls')),
 

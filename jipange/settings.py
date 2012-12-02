@@ -149,6 +149,7 @@ INSTALLED_APPS = (
     'cms.plugins.googlemap',
     'sekizai',
     'clinics',
+    'messages',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -199,6 +200,7 @@ LOGGING = {
 TWILIO_ACCOUNT_SID = 'ACf9e077bde4bb4953a3df6c849f74a5b8'
 TWILIO_AUTH_TOKEN = '7c5f00e40d941a0ca2a9bd0257d05ab8'
 TWILIO_DEFAULT_CALLERID = 'Jipange'
+TWILIO_NUMBER = '+442033225884'
 
 DATABASES = {}
 

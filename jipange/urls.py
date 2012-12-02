@@ -27,7 +27,6 @@ urlpatterns = patterns('',
     url(r'^clinics/', include('clinics.urls')),
 
     # Django CMS
+    url(r'^$', 'jipange.views.root'),
     url(r'^', include('cms.urls')),
-    # Home Page, Django CMS doesn't handle root URL
-    url(r'^$', RedirectView.as_view(url='/home/')),
 )
